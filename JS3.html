@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font: arial normal 20pt;
+        }
+
+        h1{
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores</h1>
+    <script>
+        var v1 = Number(window.prompt('Digite valor total de nota atividades (de 0 a 70):'))
+        var v2 = Number(window.prompt('digite nota prova:'))
+        var v3 = 'Teste de nota' 
+        soma = document.writeln(`A soma de ${v1} + ${v2} é igual a: ${v1+v2} <br/>`)
+        multi = document.writeln(`A multiplicação de ${v1} * ${v2} é igual a ${v1*v2} <br/>`)
+        sub = document.writeln(`A subtração de ${v1}-${v2} é igual a: ${v1-v2}<br/>`)
+        div = document.writeln(`A divisão de ${v1}/${v2} é igual a: ${v1/v2}<br/>`)
+        divinteira = document.writeln(`A divisão inteira(resto da divisão) de ${v1}%${v2} é igual a ${v1%v2}<br/>`)
+        potencia = document.writeln(`${v1} elevado a ${v2} é igual a ${v1**v2}<br/>`)
+        maior_que = document.writeln(`${v1} é maior que ${v2}? ${v1>v2}<br/>`)
+        menor_que = document.writeln(`${v1} é menor que ${v2}? ${v1<v2}<br/>`)
+        igual = document.writeln(`${v1} é igual a ${v2}? ${v1==v2}<br/>`)
+        diferente = document.writeln(`${v1} é difetente de ${v2}? ${v1!=v2}<br/>`)
+        identico = document.writeln(`${v1} é do mesmo tipo(número) e mesmo valor que ${v2}? ${v1===v2}<br/>`)
+        or = document.writeln(`${v1} é uma string ou number? ${typeof(v1) == 'number' || typeof(v1) == 'string'} <br/>`)
+        and = document.writeln(`${v3} é uma string e ${v1} é um number? ${typeof(v1) == 'number' && typeof(v3) == 'string'} <br/>`)
+        nota_semestre = (v1*4)/70 + (v2*0.6)
+        resultado = document.writeln(`Soma de provas e atividades: ${nota_semestre} <br/>`)
+        ternario = document.writeln(`Aluno foi reprovado ou aprovado? ${nota_semestre > 5?`aprovado`:`reprovado`}<br/>`)
+    </script>
+</body>
+</html>

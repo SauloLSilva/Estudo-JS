@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9</title>
+    <style>
+        body {
+            background-color:rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font: arial normal 20pt;
+        }
+
+        h1{
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM = Document Object Model</h1>
+    <h2>Teste2</h2>
+    <p>Parágrafo</p>
+    <p>Teste para Dom <strong>Teste para JS</strong></p>
+    <p id="teste">Teste com id</p>
+    <p name = teste_nome>Teste com nome</p>
+    <p class="teste_classe">Teste com nome de classe</p>
+    <script>
+        //programas necessários: Node JS, liveserver
+        /*para usar liveserver: após instalar extensão, 
+        usar localhos e definir navegador*/
+
+        //Coletando dados por tag(p, h1, h2 entre outros)
+        var coletando_por_tagname = window.document.getElementsByTagName('p')[0]
+        var coletando_por_tagname2 = window.document.getElementsByTagName('h2')[0]
+        var coletando_por_tagname3 = window.document.getElementsByTagName('h1')[0]
+        //para escrever, usar comando abaixo, não esquecer de passar o posicional
+        window.document.writeln(`O dado é ${coletando_por_tagname.innerText} <br/>`)//não esquecer do innertext
+        window.document.writeln(`O segundo dado é: ${coletando_por_tagname2.innerText} <br/>`)
+        window.document.writeln(`Terceiro dado é ${coletando_por_tagname3.innerText} <br/>`)
+        //caso queira pegar os filhos(formatação de texto) usar innerhtml
+        var coletando_por_tagname4 = window.document.getElementsByTagName('p')[1]
+        window.document.writeln(`O dado com o a formatação de texto é: ${coletando_por_tagname4.innerHTML} <br/>`)
+
+        //coletando por ID
+        var coletando_por_id = window.document.getElementById('teste')
+        window.document.writeln(`Dado coletado com ID: ${coletando_por_id.innerHTML} <br/>`)
+
+        //coletando por nome
+        var coletando_por_nome = window.document.getElementsByName('teste_nome')[0]
+        window.document.writeln(`Dado coletado por nome: ${coletando_por_nome.innerHTML} <br/>`)
+
+        //Coletando por class
+        var coletando_por_class = window.document.getElementsByClassName('teste_classe')[0]
+        window.document.writeln(`Dado coletado por classe: ${coletando_por_class.innerHTML} <br/>`)
+
+        //coletando por query selector, # é id e . é classe, o mais recomendado
+        var query_selector_id = window.document.querySelector('#teste')
+        var query_selector_classe = window.document.querySelector('.teste_classe')
+        window.document.writeln(`ID coletado por query: ${query_selector_id.innerHTML} <br/>`)
+        window.document.writeln(`Classe coletada por query: ${query_selector_classe.innerHTML} <br/>`)
+
+        //dá para mudar dados de estilo com query selector
+        var teste = window.prompt('Digite valor')
+        var colect_por_id = document.querySelector('body')
+        teste < 5? colect_por_id.style.background = 'rgb(44, 0, 0)':colect_por_id.style.background = 'rgb(3, 25, 44)'
+
+
+
+
+
+    </script>
+</body>
+</html>
